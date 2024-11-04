@@ -1,0 +1,47 @@
+{
+  "name": "LuckyNetwork",
+  "version": "1.2.3",
+  "summary": "A short description of LuckyNetwork.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/JunkyTang/LuckyNetwork",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lucky": "921969987@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/JunkyTang/LuckyNetwork.git",
+    "tag": "1.2.3"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "6.0",
+  "source_files": "LuckyNetwork/Classes/**/*",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "LuckyNetWork/Classes/Core/**/*",
+      "dependencies": {
+        "Alamofire": [
+          "~> 5.10"
+        ],
+        "LuckyPropertyWrapper": [
+          "~> 0.1"
+        ]
+      }
+    },
+    {
+      "name": "Recorder",
+      "source_files": "LuckyNetWork/Classes/Recorder/**/*",
+      "dependencies": {
+        "LuckyNetwork/Core": [
+
+        ]
+      }
+    }
+  ],
+  "swift_version": "6.0"
+}

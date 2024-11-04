@@ -1,0 +1,6 @@
+framework module LuckyNetwork {
+  umbrella header "LuckyNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

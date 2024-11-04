@@ -1,0 +1,16 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+pod 'LuckyPropertyWrapper', :git => 'https://github.com/JunkyTang/LuckyPropertyWrapper.git', :tag => '0.1.1'
+
+
+target 'LuckyNetwork_Example' do
+  pod 'LuckyNetwork', :path => '../'
+
+  target 'LuckyNetwork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

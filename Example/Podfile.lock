@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.10.1)
+  - LuckyNetwork (1.2.3):
+    - LuckyNetwork/Core (= 1.2.3)
+    - LuckyNetwork/Recorder (= 1.2.3)
+  - LuckyNetwork/Core (1.2.3):
+    - Alamofire (~> 5.10)
+    - LuckyPropertyWrapper (~> 0.1)
+  - LuckyNetwork/Recorder (1.2.3):
+    - LuckyNetwork/Core
+  - LuckyPropertyWrapper (0.1.1)
+
+DEPENDENCIES:
+  - LuckyNetwork (from `../`)
+  - LuckyPropertyWrapper (from `https://github.com/JunkyTang/LuckyPropertyWrapper.git`, tag `0.1.1`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  LuckyNetwork:
+    :path: "../"
+  LuckyPropertyWrapper:
+    :git: https://github.com/JunkyTang/LuckyPropertyWrapper.git
+    :tag: 0.1.1
+
+CHECKOUT OPTIONS:
+  LuckyPropertyWrapper:
+    :git: https://github.com/JunkyTang/LuckyPropertyWrapper.git
+    :tag: 0.1.1
+
+SPEC CHECKSUMS:
+  Alamofire: 840d2a1ad82355b536ec6ba5f97e5bfa54600ca3
+  LuckyNetwork: 67088fed24118ddec807a641dcd39a28026dc03a
+  LuckyPropertyWrapper: dc2dd041c12f03c0331800fd4dbbd1d97abffeb1
+
+PODFILE CHECKSUM: 2a455aebbf466cacef2ad8e46d5d0023627f8c3d
+
+COCOAPODS: 1.15.2
