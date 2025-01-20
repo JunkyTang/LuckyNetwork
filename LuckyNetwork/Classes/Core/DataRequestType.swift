@@ -57,7 +57,10 @@ public extension DataRequestType {
     @discardableResult
     func request(compelete: @Sendable @escaping (AFDataResponse<DataResponseType>) -> Void) -> Alamofire.DataRequest {
         session.request(url, method: method, parameters: parameters, encoder: encoder, headers: header, interceptor: interceptor, requestModifier: modifier)
-            .responseDecodable(of: DataResponseType.self, completionHandler: compelete)
+            .responseDecodable(of: DataResponseType.self) { response in
+                print(response.debugDescription)
+                compelete(response)
+            }
     }
     
     func request() async throws -> DataResponseType {
