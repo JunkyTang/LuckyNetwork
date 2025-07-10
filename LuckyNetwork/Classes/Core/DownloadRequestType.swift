@@ -67,4 +67,25 @@ public extension DownloadRequestType {
         req.response(completionHandler: compelete)
     }
     
+    
+    func download(progress: Alamofire.Request.ProgressHandler?) async throws -> URL? {
+        
+        return try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<URL?, Error>) in
+            let req = session.download(url, method: method, parameters: parameters, encoder: encoder, headers: header, interceptor: interceptor, requestModifier: modifier, to: destination)
+            if let progress = progress {
+                req.downloadProgress(closure: progress)
+            }
+            
+            req.response { response in
+                switch response.result {
+                case .success(let url):
+                    continuation.resume(returning: url)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+        
+    }
+    
 }

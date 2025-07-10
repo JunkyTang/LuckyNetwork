@@ -1,6 +1,6 @@
 {
   "name": "LuckyNetwork",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "summary": "A short description of LuckyNetwork.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/JunkyTang/LuckyNetwork",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/JunkyTang/LuckyNetwork.git",
-    "tag": "1.2.3"
+    "tag": "1.2.4"
   },
   "platforms": {
     "ios": "13.0"
@@ -37,9 +37,7 @@
       "name": "Recorder",
       "source_files": "LuckyNetWork/Classes/Recorder/**/*",
       "dependencies": {
-        "LuckyNetwork/Core": [
-
-        ]
+        "LuckyNetwork/Core": []
       }
     }
   ],

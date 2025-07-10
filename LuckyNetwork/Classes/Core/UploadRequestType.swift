@@ -86,5 +86,19 @@ public extension UploadRequestType {
     }
     
     
+    func upload(datas: [Data], name: String = "files", progress: Alamofire.Request.ProgressHandler?) async throws -> UploadResponseType {
+        return try await withCheckedThrowingContinuation { continuation in
+            upload(multipartFormData: { mutData in
+                datas.forEach{ mutData.append($0, withName: name) }
+            }, progress: progress) { response in
+                switch response.result {
+                case .success(let response):
+                    continuation.resume(returning: response)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
     
 }

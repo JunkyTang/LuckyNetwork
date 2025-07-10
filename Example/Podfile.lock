@@ -1,12 +1,12 @@
 PODS:
-  - Alamofire (5.10.1)
-  - LuckyNetwork (1.2.3):
-    - LuckyNetwork/Core (= 1.2.3)
-    - LuckyNetwork/Recorder (= 1.2.3)
-  - LuckyNetwork/Core (1.2.3):
+  - Alamofire (5.10.2)
+  - LuckyNetwork (1.2.4):
+    - LuckyNetwork/Core (= 1.2.4)
+    - LuckyNetwork/Recorder (= 1.2.4)
+  - LuckyNetwork/Core (1.2.4):
     - Alamofire (~> 5.10)
     - LuckyPropertyWrapper (~> 0.1)
-  - LuckyNetwork/Recorder (1.2.3):
+  - LuckyNetwork/Recorder (1.2.4):
     - LuckyNetwork/Core
   - LuckyPropertyWrapper (0.1.1)
 
@@ -31,10 +31,10 @@ CHECKOUT OPTIONS:
     :tag: 0.1.1
 
 SPEC CHECKSUMS:
-  Alamofire: 840d2a1ad82355b536ec6ba5f97e5bfa54600ca3
-  LuckyNetwork: 67088fed24118ddec807a641dcd39a28026dc03a
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  LuckyNetwork: 93e6186f08941da180cd5759d235c680f8a0caa6
   LuckyPropertyWrapper: dc2dd041c12f03c0331800fd4dbbd1d97abffeb1
 
 PODFILE CHECKSUM: 2a455aebbf466cacef2ad8e46d5d0023627f8c3d
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
