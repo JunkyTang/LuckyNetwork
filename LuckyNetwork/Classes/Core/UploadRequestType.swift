@@ -54,7 +54,12 @@ public extension UploadRequestType {
         if let progress = progress {
             req.uploadProgress(closure: progress)
         }
-        req.responseDecodable(of: UploadResponseType.self, completionHandler: compelete)
+        req.responseDecodable(of: UploadResponseType.self) {
+            #if DEBUG
+            print($0.debugDescription)
+            #endif
+            compelete($0)
+        }
     }
     
     
@@ -64,7 +69,12 @@ public extension UploadRequestType {
         if let progress = progress {
             req.uploadProgress(closure: progress)
         }
-        req.responseDecodable(of: UploadResponseType.self, completionHandler: compelete)
+        req.responseDecodable(of: UploadResponseType.self) {
+            #if DEBUG
+            print($0.debugDescription)
+            #endif
+            compelete($0)
+        }
     }
     
     

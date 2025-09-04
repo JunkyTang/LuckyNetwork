@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 
 
+
+
 public protocol DataRequestType {
     
     associatedtype DataResponseType: Codable&Sendable
@@ -58,7 +60,9 @@ public extension DataRequestType {
     func request(compelete: @Sendable @escaping (AFDataResponse<DataResponseType>) -> Void) -> Alamofire.DataRequest {
         session.request(url, method: method, parameters: parameters, encoder: encoder, headers: header, interceptor: interceptor, requestModifier: modifier)
             .responseDecodable(of: DataResponseType.self) { response in
+                #if DEBUG
                 print(response.debugDescription)
+                #endif
                 compelete(response)
             }
     }
